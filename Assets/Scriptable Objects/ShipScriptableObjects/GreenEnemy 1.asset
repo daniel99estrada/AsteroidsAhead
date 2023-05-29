@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fcda3c2a6a30c6419936ca886566c8c, type: 3}
+  m_Name: GreenEnemy 1
+  m_EditorClassIdentifier: 
+  ship: {fileID: 4462466538093400843, guid: c4310d10d52c324488bdc7d31b88c79c, type: 3}
+  levelToSpawn: 3
+  chasingSpeed: 0.1
+  attackingSpeed: 0.04
+  evasionTime: 0.5
+  ammoTag: EnemyLaser
+  laserSpeed: 20
+  laserDamage: 10
+  shootingRange: 20
+  fireRate: 5
+  burstDelay: 0.2
+  burstCount: 6
+  minWeight: 0.361
+  maxWeight: 0.386
+  maxHealth: 150

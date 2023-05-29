@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fcda3c2a6a30c6419936ca886566c8c, type: 3}
+  m_Name: PurpleEnemy 4
+  m_EditorClassIdentifier: 
+  ship: {fileID: 2120189931312694243, guid: 416da092d06862d40bb17b09cdc81e90, type: 3}
+  levelToSpawn: 6
+  chasingSpeed: 0.1
+  attackingSpeed: 0.04
+  evasionTime: 0.5
+  ammoTag: SpiralLaser
+  laserSpeed: 10
+  laserDamage: 20
+  shootingRange: 20
+  fireRate: 3
+  burstDelay: 1
+  burstCount: 1
+  minWeight: 0.465
+  maxWeight: 0.662
+  maxHealth: 125

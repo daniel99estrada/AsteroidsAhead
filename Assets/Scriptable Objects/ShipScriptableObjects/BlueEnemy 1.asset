@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fcda3c2a6a30c6419936ca886566c8c, type: 3}
+  m_Name: BlueEnemy 1
+  m_EditorClassIdentifier: 
+  ship: {fileID: -787102735745413618, guid: edc5b2886e6cf1e41bb457e90d36b413, type: 3}
+  levelToSpawn: 7
+  chasingSpeed: 0.1
+  attackingSpeed: 0.04
+  evasionTime: 0.5
+  ammoTag: EnemyRay
+  laserSpeed: 20
+  laserDamage: 20
+  shootingRange: 20
+  fireRate: 4
+  burstDelay: 0.3
+  burstCount: 3
+  minWeight: 0.695
+  maxWeight: 0.846
+  maxHealth: 150

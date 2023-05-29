@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b049be490aee7e44eb707de84aa43017, type: 3}
+  m_Name: yellow
+  m_EditorClassIdentifier: 
+  ship: {fileID: 1493724729915594723, guid: 0b13054c77cad234c86ed860bb828622, type: 3}
+  ammoTag: GreenLaser
+  laserSpawnPoint: {fileID: 2424531490311526946, guid: 04f827ce8df4ac445bf150e6d49686c9, type: 3}
+  laserDamage: 40
+  defenseStat: 0.3
+  fireRate: 0.2
+  tag: Glider
+  burstCount: 1
+  burstDelay: 0.1
