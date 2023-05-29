@@ -16,19 +16,14 @@ public class ObjectPool : MonoBehaviour
     public List<Pool> pools;
     public Dictionary<string, Queue<GameObject>> poolDictionary;
 
-    #region Singleton
-
     public static ObjectPool Instance;
 
     private void Awake()
     {
         if (Instance == null) Instance = this;
-    }
 
-    #endregion
+        DontDestroyOnLoad(gameObject);
 
-    void Start () 
-    {
         poolDictionary = new Dictionary<string, Queue<GameObject>>();
 
         foreach (Pool pool in pools)

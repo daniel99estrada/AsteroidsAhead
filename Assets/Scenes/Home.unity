@@ -749,6 +749,103 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a265879e8a51d7c4dbeee1541acda256, type: 3}
+--- !u!1 &342797965
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 342797967}
+  - component: {fileID: 342797966}
+  m_Layer: 0
+  m_Name: Object Pool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &342797966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342797965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8d2c7b8d87db2f468f9a32e745b0e9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pools:
+  - tag: AmoRing
+    prefab: {fileID: 2777202361574141318, guid: 20173467e6e4797468d2c5b6695d6374, type: 3}
+    size: 15
+    lifetime: 10
+  - tag: HealthRing
+    prefab: {fileID: 764991373263556963, guid: c83b6697c51a9f6429fde022d83abfa7, type: 3}
+    size: 15
+    lifetime: 10
+  - tag: PlayerRays
+    prefab: {fileID: 2424531490311526948, guid: 04f827ce8df4ac445bf150e6d49686c9, type: 3}
+    size: 20
+    lifetime: 10
+  - tag: EnemyLaser
+    prefab: {fileID: 2424531490311526948, guid: d1b2c802228e63b43ba211fa0dc68f86, type: 3}
+    size: 50
+    lifetime: 10
+  - tag: SpiralLaser
+    prefab: {fileID: 453276219177175662, guid: e7a4ccafa5909a14087f4741783ade16, type: 3}
+    size: 20
+    lifetime: 10
+  - tag: BlueMissile
+    prefab: {fileID: 4038166371356786838, guid: e380898274fd06743b152fbb10e72eec, type: 3}
+    size: 10
+    lifetime: 10
+  - tag: EnemyRay
+    prefab: {fileID: 2033684115834025182, guid: caff2e2527ea04743b81bfc15807ec13, type: 3}
+    size: 50
+    lifetime: 10
+  - tag: Barrel
+    prefab: {fileID: 832809875527059446, guid: 30e3f3dbbf17f42419cd6d9e4a8c2183, type: 3}
+    size: 5
+    lifetime: 3
+  - tag: Explosion
+    prefab: {fileID: 191186, guid: 079954accd64b32419ec069129c81273, type: 3}
+    size: 10
+    lifetime: 5
+  - tag: GreenLaserImpactFX
+    prefab: {fileID: 100748, guid: cd4d7020429cde74db076ffa72495419, type: 3}
+    size: 20
+    lifetime: 10
+  - tag: LaserRing
+    prefab: {fileID: 1147100583415571585, guid: f10c71f53b8117445908d7d11014a4d9, type: 3}
+    size: 15
+    lifetime: 5
+  - tag: GreenLaser
+    prefab: {fileID: 2424531490311526948, guid: 04f827ce8df4ac445bf150e6d49686c9, type: 3}
+    size: 30
+    lifetime: 5
+  - tag: YellowFirework
+    prefab: {fileID: 110790, guid: 0f75f6db4a318f54382e0c98b2226db8, type: 3}
+    size: 5
+    lifetime: 3
+--- !u!4 &342797967
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342797965}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.2400599, y: 1.8493605, z: 12.175182}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &357076818
 GameObject:
   m_ObjectHideFlags: 0

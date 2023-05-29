@@ -14,9 +14,13 @@ public class RingSpawner : MonoBehaviour
 
     Transform player;
 
-    void Start ()
+    void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+    }
+
+    void OnEnable ()
+    {
         InvokeRepeating("SpawnActors", spawnInterval, spawnInterval);
     }
 

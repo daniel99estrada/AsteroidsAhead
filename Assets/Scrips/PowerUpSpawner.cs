@@ -9,7 +9,7 @@ public class PowerUpSpawner : Grid
     public List<ShipScriptableObject> ships;
     public MoveFastScriptableObject settings;
 
-    void Start ()
+    void OnEnable ()
     {
         StartCoroutine(SpawnActorsCoroutine());
     }
