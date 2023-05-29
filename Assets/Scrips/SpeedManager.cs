@@ -36,12 +36,10 @@ public class SpeedManager: MonoBehaviour
     public static void Accelerate()
     {   
         accelerate = true;
-        CameraFollow.Instance.Move();
     }
 
     public void Deaccelerate ()
     {
         accelerate = false; 
-        CameraFollow.Instance.Chase();
     }
 }
