@@ -40,12 +40,11 @@ public class EnemySpawner : MonoBehaviour
     private void Awake()
     {
         if (Instance == null) Instance = this;
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     void Start()
     {   
-        player = GameObject.FindGameObjectWithTag("Player").transform;
-        level = 0;
         //DELETE 
         totalWaves = 2;
         StartNewLevel();

@@ -272,7 +272,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &71790825
 Transform:
   m_ObjectHideFlags: 0
@@ -290,9 +290,8 @@ Transform:
   - {fileID: 1722376054}
   - {fileID: 1754772172}
   - {fileID: 1156897542}
-  - {fileID: 786237935}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &191064433
 GameObject:
@@ -679,7 +678,6 @@ GameObject:
   m_Component:
   - component: {fileID: 277199958}
   - component: {fileID: 277199956}
-  - component: {fileID: 277199955}
   m_Layer: 0
   m_Name: Environment Asteroids
   m_TagString: Manager
@@ -687,19 +685,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &277199955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 277199954}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe17a8b9f8dcbef45800e55e59513235, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  asteroids: {fileID: 11400000, guid: 894e16d40503592418d91639dd9612d2, type: 2}
 --- !u!114 &277199956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1074,6 +1059,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  spawners: {fileID: 71790824}
 --- !u!114 &357076823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2058,7 +2044,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &728438836
 GameObject:
@@ -2378,10 +2364,10 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 46
+    m_Top: 7
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 555
+  m_Spacing: 597.6
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
@@ -2568,13 +2554,14 @@ GameObject:
   m_Component:
   - component: {fileID: 786237935}
   - component: {fileID: 786237934}
+  - component: {fileID: 786237936}
   m_Layer: 0
   m_Name: Object Pool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &786237934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2648,13 +2635,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 786237933}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.2400599, y: 1.8493605, z: 12.175182}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 71790825}
-  m_RootOrder: 5
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &786237936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786237933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe17a8b9f8dcbef45800e55e59513235, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asteroids: {fileID: 11400000, guid: 894e16d40503592418d91639dd9612d2, type: 2}
 --- !u!1 &791015935
 GameObject:
   m_ObjectHideFlags: 0
@@ -3788,7 +3788,7 @@ Transform:
   m_Children:
   - {fileID: 747668646}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 7.91, y: 0, z: 0}
 --- !u!114 &1120042229
 MonoBehaviour:
@@ -3909,7 +3909,7 @@ Transform:
   m_Children:
   - {fileID: 305652579}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1191350711
 GameObject:
@@ -4356,7 +4356,7 @@ Transform:
   m_Children:
   - {fileID: 1961967898}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 6.75, y: 0, z: 0}
 --- !u!1 &1347770951
 GameObject:

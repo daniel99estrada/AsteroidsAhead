@@ -28,14 +28,12 @@ public class BgAsteroidManager : Grid
     private void OnEnable()
     {
         if (Instance == null) Instance = this;
-    }
-    void Start ()
-    {
         StartCoroutine(SpawnActorsCoroutine());
     }
 
     IEnumerator SpawnActorsCoroutine()
-    {
+    {   
+        Debug.Log("Spawn Asteroids");
         while (true)
         {
             SpawnActors();
@@ -45,7 +43,7 @@ public class BgAsteroidManager : Grid
 
     public override void InstantiateObject(Vector3 position)
     {
-        GameObject obj = GetComponent<BackgroundAsteroidPool>().SpawnFromPool(position, Quaternion.identity);
+        GameObject obj = BackgroundAsteroidPool.Instance.SpawnFromPool(position, Quaternion.identity);
         BackGroundAsteroids asteroid = obj.GetComponent<BackGroundAsteroids>();
         asteroid.SetRandomSpeed(minSpeed, maxSpeed);
         asteroid.SetRandomScale(minScale, maxScale);

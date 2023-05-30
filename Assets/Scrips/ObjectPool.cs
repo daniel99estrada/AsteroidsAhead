@@ -22,7 +22,7 @@ public class ObjectPool : MonoBehaviour
     {
         if (Instance == null) Instance = this;
 
-        DontDestroyOnLoad(gameObject);
+        // DontDestroyOnLoad(gameObject);
 
         poolDictionary = new Dictionary<string, Queue<GameObject>>();
 

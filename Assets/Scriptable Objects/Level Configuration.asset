@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c01e8619d4b4a064880d60affe4663ad, type: 3}
   m_Name: Level Configuration
   m_EditorClassIdentifier: 
-  level: 4
+  level: 1
   mode: Mission
-  highestLevelCompleted: 3
+  highestLevelCompleted: 1

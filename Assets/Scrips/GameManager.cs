@@ -17,6 +17,9 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance;
 
+    public GameObject spawners;
+
+
     private void Awake()
     {
         if (Instance == null) Instance = this;
@@ -31,10 +34,18 @@ public class GameManager : MonoBehaviour
         {
             ShipManager player = playerObject.GetComponent<ShipManager>();
             player.OnDeath += TriggerGameOver;
-            // EnemySpawner.Instance.OnLevelEnded += HandleWaveEnd;
-            EnemySpawner.Instance.OnWaveEnded += HandleWaveEnd;
-            BgAsteroidManager.Instance.OnAsteroidShowerEnd += StartNewWave;
         }
+
+        StartCoroutine(EnableSpawnersAfterDelay());
+    }
+
+    private IEnumerator EnableSpawnersAfterDelay()
+    {
+        yield return new WaitForSeconds(2f);
+
+        spawners.SetActive(true);
+        EnemySpawner.Instance.OnWaveEnded += HandleWaveEnd;
+        BgAsteroidManager.Instance.OnAsteroidShowerEnd += StartNewWave;
     }
     
     private void TriggerGameOver()
@@ -52,7 +63,7 @@ public class GameManager : MonoBehaviour
         EnemySpawner.Instance.SpawnWave();
     }
 
-    private void HandleWaveEnd()
+    public void HandleWaveEnd()
     {
        float rand = Random.Range(0f, 1f);
        

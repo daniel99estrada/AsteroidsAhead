@@ -3,7 +3,6 @@ using System;
 
 public class PauseMenuManager : MonoBehaviour
 {
-    public GameObject menuTint;
     public GameObject inputUI;
     public GameObject gameOverUI;
     public GameObject levelCompletedUI;
