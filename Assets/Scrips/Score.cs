@@ -12,9 +12,10 @@ public class Score : MonoBehaviour
         ScoreManager.Instance.OnScoreUpdate += UpdateScoreUI;
     }
 
-    void OnEnable()
-    {
-        scoreText.text = ScoreManager.Instance.score.ToString();
+    public void OnEnable()
+    {   
+        Debug.Log("Setting Score UI");
+        scoreText.text = ScoreManager.Instance.GetScore().ToString();
     }
 
     private void UpdateScoreUI(int score)

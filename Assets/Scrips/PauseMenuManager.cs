@@ -7,6 +7,10 @@ public class PauseMenuManager : MonoBehaviour
     public GameObject gameOverUI;
     public GameObject levelCompletedUI;
     public GameObject pauseUI;
+    public GameObject startUI; // Reference to the start UI game object
+    public GameObject settingsUI;
+
+    private bool isStartUIActive = true;
 
     private void Awake()
     {
@@ -35,6 +39,14 @@ public class PauseMenuManager : MonoBehaviour
 
         PauseManager.Instance.OnPaused -= HandlePaused;
         PauseManager.Instance.OnUnpaused -= HandleUnpaused;
+    }
+
+    public void ToggleUIState()
+    {
+        isStartUIActive = !isStartUIActive; 
+
+        startUI.SetActive(isStartUIActive);
+        settingsUI.SetActive(!isStartUIActive);
     }
 
     private void HandlePaused()

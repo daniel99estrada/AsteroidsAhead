@@ -29,7 +29,7 @@ public class ShipManager : Health, IActor
 
     public float speed = 0.5f;
 
-    
+
 
     private void Awake()
     {
@@ -46,6 +46,7 @@ public class ShipManager : Health, IActor
         playerInput.Player.Enable();
         playerInput.Player.Shoot.performed += Shoot;
 
+        OnDeath += DeactivateShip;
         health = maxHealth;
         currentAmo = maxAmo;
 
@@ -153,5 +154,10 @@ public class ShipManager : Health, IActor
         laser.GetComponent<Laser>().SetTargetTag("Enemy");  
 
         SoundManager.Instance.PlaySound(SoundManager.Sound.Laser);
+    }
+
+    public void DeactivateShip()
+    {
+        activeShipGO.SetActive(false);
     }
 }

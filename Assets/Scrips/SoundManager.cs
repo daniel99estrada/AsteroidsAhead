@@ -7,6 +7,11 @@ public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance { get; private set; }
 
+    public bool soundFXEnabled = true;
+    public bool musicEnabled = true;
+
+    public AudioSource musicAudioSource;
+
     public enum Sound
     {
         UI,
@@ -45,6 +50,8 @@ public class SoundManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
 
+        musicAudioSource = GetComponent<AudioSource>();
+
         soundDictionary = new Dictionary<Sound, List<Sounds>>();
 
         foreach (Sounds sound in soundList)
@@ -56,8 +63,24 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    public void PlaySound(Sound sound)
+    public void EnableSoundFX()
     {
+        soundFXEnabled = !soundFXEnabled; 
+        SoundSpriteUpdater.Instance.UpdateSoundSprite(soundFXEnabled);
+        PlaySound(Sound.UI);
+    }
+
+    public void EnableMusic()
+    {
+        musicAudioSource.mute = !musicAudioSource.mute; 
+        SoundSpriteUpdater.Instance.UpdateMusicSprite(musicAudioSource.mute);
+        PlaySound(Sound.UI);
+    }
+
+    public void PlaySound(Sound sound)
+    {   
+        if (!soundFXEnabled) return;
+
         if (soundDictionary.ContainsKey(sound))
         {
             List<Sounds> sounds = soundDictionary[sound];
