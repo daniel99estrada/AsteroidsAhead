@@ -37,7 +37,6 @@ public class ShipManager : Health, IActor
         {
             Instance = this;
         }
-        // DontDestroyOnLoad(this.gameObject);
     }
 
     private void Start()
@@ -157,7 +156,11 @@ public class ShipManager : Health, IActor
     }
 
     public void DeactivateShip()
-    {
-        activeShipGO.SetActive(false);
+    {   
+        ObjectPool.Instance.SpawnFromPool("Explosion", transform.position, transform.rotation);
+        OnDeath -= DeactivateShip;
+        Debug.Log("Deactivate");
+        this.gameObject.SetActive(false);
+
     }
 }

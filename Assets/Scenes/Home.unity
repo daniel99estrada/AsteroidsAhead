@@ -2804,7 +2804,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d379e4598270b947a86d63adc3242f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundFXEnabled: 0
+  soundFXEnabled: 1
   musicEnabled: 0
   musicAudioSource: {fileID: 0}
   soundList:
