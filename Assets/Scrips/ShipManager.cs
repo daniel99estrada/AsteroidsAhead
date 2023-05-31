@@ -38,7 +38,7 @@ public class ShipManager : Health, IActor
             Instance = this;
         }
     }
-
+    
     private void Start()
     {   
         playerInput = new PlayerControls();
