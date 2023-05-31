@@ -7,8 +7,8 @@ public class PauseMenuManager : MonoBehaviour
     public GameObject gameOverUI;
     public GameObject levelCompletedUI;
     public GameObject pauseUI;
-    public GameObject startUI; // Reference to the start UI game object
-    public GameObject settingsUI;
+    // public GameObject startUI; // Reference to the start UI game object
+    // public GameObject settingsUI;
 
     private bool isStartUIActive = true;
 
@@ -41,22 +41,23 @@ public class PauseMenuManager : MonoBehaviour
         PauseManager.Instance.OnUnpaused -= HandleUnpaused;
     }
 
-    public void ToggleUIState()
-    {
-        isStartUIActive = !isStartUIActive; 
+    // public void ToggleUIState()
+    // {
+    //     isStartUIActive = !isStartUIActive; 
 
-        startUI.SetActive(isStartUIActive);
-        settingsUI.SetActive(!isStartUIActive);
-    }
+    //     startUI.SetActive(isStartUIActive);
+    //     settingsUI.SetActive(!isStartUIActive);
+    // }
 
-    private void HandlePaused()
+    public void HandlePaused()
     {   
+        Debug.Log("Pause");
         pauseUI.SetActive(true);
         inputUI.SetActive(false);
         SoundManager.Instance.PlaySound(SoundManager.Sound.UI);
     }
 
-    private void HandleUnpaused()
+    public void HandleUnpaused()
     {   
         pauseUI.SetActive(false);
         inputUI.SetActive(true);

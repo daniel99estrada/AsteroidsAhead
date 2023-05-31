@@ -66,14 +66,14 @@ public class SoundManager : MonoBehaviour
     public void EnableSoundFX()
     {
         soundFXEnabled = !soundFXEnabled; 
-        SoundSpriteUpdater.Instance.UpdateSoundSprite(soundFXEnabled);
+        SoundSpriteUpdater.Instance.UpdateSoundSprite(!soundFXEnabled);
         PlaySound(Sound.UI);
     }
 
     public void EnableMusic()
     {
         musicAudioSource.mute = !musicAudioSource.mute; 
-        SoundSpriteUpdater.Instance.UpdateMusicSprite(musicAudioSource.mute);
+        SoundSpriteUpdater.Instance.UpdateMusicSprite(!musicAudioSource.mute);
         PlaySound(Sound.UI);
     }
 
