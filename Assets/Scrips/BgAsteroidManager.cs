@@ -25,7 +25,7 @@ public class BgAsteroidManager : Grid
 
     public static BgAsteroidManager Instance;
 
-    private void OnEnable()
+    private void Start()
     {
         if (Instance == null) Instance = this;
         StartCoroutine(SpawnActorsCoroutine());

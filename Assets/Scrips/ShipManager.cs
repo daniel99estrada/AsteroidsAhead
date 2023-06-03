@@ -29,7 +29,17 @@ public class ShipManager : Health, IActor
 
     public float speed = 0.5f;
 
+    public InputActionReference shootActionReference;
 
+    void OnEnable()
+    {
+        shootActionReference.action.Enable();
+    }
+
+    void OnDisable()
+    {
+        shootActionReference.action.Disable();
+    }
 
     private void Awake()
     {
@@ -37,13 +47,14 @@ public class ShipManager : Health, IActor
         {
             Instance = this;
         }
+        shootActionReference.action.performed += Shoot;
     }
     
     private void Start()
     {   
-        playerInput = new PlayerControls();
-        playerInput.Player.Enable();
-        playerInput.Player.Shoot.performed += Shoot;
+        // playerInput = new PlayerControls();
+        // playerInput.Player.Enable();
+        // playerInput.Player.Shoot.performed += Shoot;
 
         OnDeath += DeactivateShip;
         health = maxHealth;
@@ -107,6 +118,7 @@ public class ShipManager : Health, IActor
 
     public void Shoot(InputAction.CallbackContext context)
     {   
+        if (this == null) return;
         // StartCoroutine(MoveForward());
         if (!canShoot || currentAmo <= 0) return;
         StartCoroutine(BurstFire());

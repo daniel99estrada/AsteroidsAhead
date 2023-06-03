@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class ShipMovement : MonoBehaviour
 {   
@@ -49,17 +50,28 @@ public class ShipMovement : MonoBehaviour
 
     public float magnitude;
 
+    public InputActionReference moveAction;
+
     void Start()
     {   
-        playerInput = new PlayerControls();
-        playerInput.Player.Enable();
+        // playerInput = new PlayerControls();
+        // playerInput.Player.Enable();
         transform.position = new Vector3(0,2,0);
     }
+    void OnEnable()
+    {
+        moveAction.action.Enable();
+    }
 
+    void OnDisable()
+    {
+        moveAction.action.Disable();
+    }
     void Update()
     {   
 
-        Vector2 inputValue = playerInput.Player.Move.ReadValue<Vector2>();
+        // Vector2 inputValue = playerInput.Player.Move.ReadValue<Vector2>();
+        Vector2 inputValue = moveAction.action.ReadValue<Vector2>();
         magnitude = Mathf.Abs(inputValue.magnitude);
         horizontal = inputValue.x;
         vertical = inputValue.y;

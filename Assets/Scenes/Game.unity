@@ -2711,6 +2711,7 @@ MonoBehaviour:
   t: 0
   baseSpeed: 20
   magnitude: 2
+  moveAction: {fileID: -8840784098552122454, guid: f563755c479ec174bae8430baebc7cba, type: 3}
 --- !u!54 &791015940
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2753,6 +2754,7 @@ MonoBehaviour:
   maxAmo: 50
   currentAmo: 40
   speed: 0.125
+  shootActionReference: {fileID: 4649766663996743626, guid: f563755c479ec174bae8430baebc7cba, type: 3}
 --- !u!65 &791015943
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5828,6 +5830,18 @@ MonoBehaviour:
       - m_Target: {fileID: 357076825}
         m_TargetAssemblyTypeName: SceneSelector, Assembly-CSharp
         m_MethodName: LoadHomeScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 357076823}
+        m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
+        m_MethodName: UnpauseGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
