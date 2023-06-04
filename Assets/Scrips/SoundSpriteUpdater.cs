@@ -15,6 +15,13 @@ public class SoundSpriteUpdater : MonoBehaviour
         if (Instance == null) Instance = this;
     }
 
+    void Start()
+    {   
+        Debug.Log("Updated Music Sprites");
+        UpdateSoundSprite(SoundManager.Instance.soundFXEnabled);
+        UpdateMusicSprite(SoundManager.Instance.musicEnabled);
+    }   
+
     public void UpdateSoundSprite(bool enabled)
     {
         if (enabled)

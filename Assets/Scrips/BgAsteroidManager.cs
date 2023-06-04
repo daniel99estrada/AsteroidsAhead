@@ -33,7 +33,6 @@ public class BgAsteroidManager : Grid
 
     IEnumerator SpawnActorsCoroutine()
     {   
-        Debug.Log("Spawn Asteroids");
         while (true)
         {
             SpawnActors();

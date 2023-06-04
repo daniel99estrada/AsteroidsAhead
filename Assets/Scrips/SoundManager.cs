@@ -63,17 +63,18 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    public void EnableSoundFX()
+    public void ToggleSoundFX()
     {
         soundFXEnabled = !soundFXEnabled; 
-        SoundSpriteUpdater.Instance.UpdateSoundSprite(!soundFXEnabled);
+        SoundSpriteUpdater.Instance.UpdateSoundSprite(soundFXEnabled);
         PlaySound(Sound.UI);
     }
 
-    public void EnableMusic()
-    {
-        musicAudioSource.mute = !musicAudioSource.mute; 
-        SoundSpriteUpdater.Instance.UpdateMusicSprite(!musicAudioSource.mute);
+    public void ToggleMusic()
+    {   
+        musicEnabled = !musicEnabled;
+        musicAudioSource.mute = !musicEnabled; 
+        SoundSpriteUpdater.Instance.UpdateMusicSprite(musicEnabled);
         PlaySound(Sound.UI);
     }
 

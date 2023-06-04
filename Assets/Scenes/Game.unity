@@ -677,6 +677,7 @@ GameObject:
   m_Component:
   - component: {fileID: 277199958}
   - component: {fileID: 277199956}
+  - component: {fileID: 277199959}
   m_Layer: 0
   m_Name: Environment Asteroids
   m_TagString: Manager
@@ -728,6 +729,19 @@ Transform:
   m_Father: {fileID: 71790825}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &277199959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277199954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe17a8b9f8dcbef45800e55e59513235, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asteroids: {fileID: 11400000, guid: 894e16d40503592418d91639dd9612d2, type: 2}
 --- !u!1 &287458445
 GameObject:
   m_ObjectHideFlags: 0
