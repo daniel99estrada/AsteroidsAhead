@@ -1,6 +1,6 @@
 # Asteroids Ahead
 
-![Asteroids Ahead Logo](https://example.com/asteroids-ahead/logo.png)
+![Asteroids Ahead Logo](https://danielestrada12345.s3.us-east-2.amazonaws.com/Starting+screen.png)
 
 Welcome to Asteroids Ahead, a thrilling mobile Unity 3D game available on the Google App Store! Take control of a powerful space ship and embark on an epic journey through space. Your mission is to survive wave after wave of AI enemy ships while collecting health and ammo power-ups to aid your progress. With endless mode and missions mode, each level increasing in difficulty, prepare yourself for an exhilarating and challenging gaming experience!
 
